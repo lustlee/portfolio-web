@@ -1,7 +1,7 @@
 import React from 'react';
 import './Portfolio.css';
 
-import data from '../../constants/main-constants';
+import data from '../../constants/data-portfolio';
 const Portfolio = () => {
 	return (
 			<section id='portfolio'>

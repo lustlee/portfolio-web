@@ -36,22 +36,22 @@ const dataExperience = [
 				experience: 'Experience'
 			},
 			{
-				id: 7,
+				id: 8,
 				title: 'Redux toolkit',
 				experience: 'Experience'
 			},
 			{
-				id: 8,
+				id: 9,
 				title: 'Material UI',
 				experience: 'Experience'
 			},
 			{
-				id: 9,
+				id: 10,
 				title: 'Bootstrap',
 				experience: 'Experience'
 			},
 			{
-				id: 10,
+				id: 11,
 				title: 'Tailwind',
 				experience: 'Intermediate'
 			},

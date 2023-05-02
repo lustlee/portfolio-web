@@ -22,28 +22,38 @@ const dataExperience = [
 			},
 			{
 				id: 5,
-				title: 'React',
+				title: 'TypeScript',
 				experience: 'Experience'
 			},
 			{
 				id: 6,
+				title: 'React-Router',
+				experience: 'Experience'
+			},
+			{
+				id: 7,
 				title: 'Redux',
 				experience: 'Experience'
 			},
 			{
 				id: 7,
-				title: 'MaterialUI',
+				title: 'Redux toolkit',
 				experience: 'Experience'
 			},
 			{
 				id: 8,
-				title: 'Bootstrap',
+				title: 'Material UI',
 				experience: 'Experience'
 			},
 			{
 				id: 9,
-				title: 'Tailwind',
+				title: 'Bootstrap',
 				experience: 'Experience'
+			},
+			{
+				id: 10,
+				title: 'Tailwind',
+				experience: 'Intermediate'
 			},
 		],
 		[
@@ -71,6 +81,11 @@ const dataExperience = [
 				id: 5,
 				title: 'Mongoose',
 				experience: 'Experience'
+			},
+			{
+				id: 6,
+				title: 'Firebase',
+				experience: 'Intermediate'
 			},
 		]
 ];

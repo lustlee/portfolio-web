@@ -1,10 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Portfolio.css';
 
 import data from '../../constants/data-portfolio';
+import {useInView} from "react-intersection-observer";
+import {observerSection} from "../../helpers";
 const Portfolio = () => {
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			observerSection('portfolio-nav');
+		}
+	}, [inView]);
+
 	return (
-			<section id='portfolio'>
+			<section id='portfolio' ref={ref}>
 				<h5>My Recent Work</h5>
 				<h2>Portfolio</h2>
 

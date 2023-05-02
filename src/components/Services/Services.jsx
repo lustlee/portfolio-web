@@ -1,9 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Services.css';
 import {BsCheckLg} from "react-icons/bs";
+import {useInView} from "react-intersection-observer";
+import {observerSection} from "../../helpers";
 const Services = () => {
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			observerSection('services-nav');
+		}
+	}, [inView]);
+
 	return (
-			<section id='services'>
+			<section id='services' ref={ref}>
 				<h5>What I Offer</h5>
 				<h2>Services</h2>
 

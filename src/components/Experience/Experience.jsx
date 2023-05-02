@@ -1,10 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Experience.css';
 import {BsFillPatchCheckFill} from "react-icons/bs";
 import data from '../../constants/data-experience';
+import {useInView} from "react-intersection-observer";
+import {observerSection} from "../../helpers";
 const Experience = () => {
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			observerSection('experience-nav');
+		}
+	}, [inView]);
+
+
 	return (
-			<section id='experience'>
+			<section id='experience' ref={ref}>
 				<h5>What skills I Have</h5>
 				<h2>My Experience</h2>
 

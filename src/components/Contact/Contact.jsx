@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Contact.css';
 import {MdEmail} from "react-icons/md";
 import {FaTelegramPlane} from "react-icons/fa";
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import {useInView} from "react-intersection-observer";
+import {observerSection} from "../../helpers";
 
 const Contact = () => {
 	const form = useRef();
@@ -15,8 +17,16 @@ const Contact = () => {
 		e.target.reset();
 	};
 
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			observerSection('contact-nav');
+		}
+	}, [inView]);
+
 	return (
-			<section id='contact'>
+			<section id='contact' ref={ref}>
 				<h5>Get in Touch</h5>
 				<h2>Contact me</h2>
 

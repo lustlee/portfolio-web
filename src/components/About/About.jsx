@@ -1,11 +1,22 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './About.css';
 import ME from '../../assets/me.png'
 import {FaAward, FaUsers} from 'react-icons/fa';
 import {VscFolderActive} from 'react-icons/vsc';
+import {useInView} from "react-intersection-observer";
+import {observerSection} from "../../helpers";
 const About = () => {
+
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			observerSection('about-nav');
+		}
+	}, [inView]);
+
 	return (
-			<section id='about'>
+			<section id='about' ref={ref}>
 				<h5>Get to Know</h5>
 				<h2>About Me</h2>
 

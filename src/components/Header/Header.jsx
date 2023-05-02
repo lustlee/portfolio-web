@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import CTA from "./CTA";
 import ME from "../../assets/me.png"
 import HeaderSocials from "./HeaderSocials";
 import './Header.css';
+import {useInView} from "react-intersection-observer";
+import {observerSection} from "../../helpers";
 const Header = () => {
+	const [ref, inView] = useInView();
+
+	useEffect(() => {
+		if (inView) {
+			observerSection('home-nav');
+		}
+	}, [inView]);
 	return (
-			<header>
+			<header ref={ref}>
 				<div className="container header__container">
 					<h5>Hello I'm</h5>
 					<h1>Ramazan Tokoshev</h1>

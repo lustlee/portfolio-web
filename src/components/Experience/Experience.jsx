@@ -1,6 +1,7 @@
 import React from 'react';
 import './Experience.css';
 import {BsFillPatchCheckFill} from "react-icons/bs";
+import data from '../../constants/data-experience';
 const Experience = () => {
 	return (
 			<section id='experience'>
@@ -11,103 +12,34 @@ const Experience = () => {
 					<div className='experience__frontend'>
 						<h3>Frontend Development</h3>
 						<div className="experience__content">
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-									<h4>HTML</h4>
-									<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-									<h4>CSS</h4>
-									<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-									<h4>JavaScript</h4>
-									<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-									<h4>React</h4>
-									<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-									<h4>Redux</h4>
-									<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-									<h4>MaterialUI</h4>
-									<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-									<h4>Bootstrap</h4>
-									<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-									<h4>Tailwind</h4>
-									<small className='text-light'>Intermediate</small>
-								</div>
-							</article>
+							{
+								data[0].map(({id, title, experience}) => (
+										<article key={id} className='experience__details'>
+											<BsFillPatchCheckFill className='experience__details-icon'/>
+											<div>
+												<h4>{title}</h4>
+												<small className='text-light'>{experience}</small>
+											</div>
+										</article>
+								))
+							}
 						</div>
 					</div>
 
 					<div className='experience__backend'>
 						<h3>Backend Development</h3>
 						<div className="experience__content">
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-									<h4>Node JS</h4>
-									<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-									<h4>MongoDB</h4>
-									<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-								<h4>Express</h4>
-								<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-								<h4>MySQL</h4>
-								<small className='text-light'>Experience</small>
-								</div>
-							</article>
-							<article className='experience__details'>
-								<BsFillPatchCheckFill className='experience__details-icon'/>
-								<div>
-								<h4>Mongoose</h4>
-								<small className='text-light'>Intermediate</small>
-								</div>
-							</article>
+							{
+								data[1].map(({id, title, experience}) => (
+										<article key={id} className='experience__details'>
+											<BsFillPatchCheckFill className='experience__details-icon'/>
+											<div>
+												<h4>{title}</h4>
+												<small className='text-light'>{experience}</small>
+											</div>
+										</article>
+								))
+							}
 						</div>
 					</div>
 				</div>

@@ -12,7 +12,7 @@ const Services = () => {
 
 					<article className='service'>
 						<div className='service__head'>
-							<h3>Frontend Developer</h3>
+							<h3>Frontend Develop</h3>
 						</div>
 						<ul className='service__list'>
 							<li>
@@ -80,7 +80,7 @@ const Services = () => {
 
 					<article className='service'>
 						<div className='service__head'>
-							<h3>Backend Developer</h3>
+							<h3>Backend Develop</h3>
 						</div>
 						<ul className='service__list'>
 							<li>
